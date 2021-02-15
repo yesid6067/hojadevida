@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title></title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+        <style>
+        html, body {
+    height: 20%;
+
+
+  }
+  .svg-wrapper {
+    height: 10px;
+  	margin: 10 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px;
+  }
+  .shape {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #19f6e8;
+  }
+  .text {
+    color: black;
+    font-family: 'Roboto Condensed';
+    font-size: 22px;
+    letter-spacing: 8px;
+    line-height: 32px;
+    position: relative;
+    top: -48px;
+  }
+  @keyframes draw {
+    0% {
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 20px;
+    }
+    100% {
+      stroke-dasharray: 760;
+      stroke-dashoffset: 0;
+      stroke-width: 2px;
+    }
+  }
+  .svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+  }
+      </style>
+  
+  </head>
+  <body>
+    <header>
+      <div class="svg-wrapper">
+      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="60" width="320" />
+      </svg>
+       <div class="text">Yesid Suarez</div>
+    </div><br/><br/>
+      <h1>Hoja de Vida</h1>
+
+    </header>
+    <section>
+      <ul>
+        <li><a href="index.html" id="Inicio">Inicio</a></li>
+        <li><a href="educacion.html" id="Educación" title="Educación">Educacion</a></li>
+        <li><a href="experiencia.html" id="Experiencia" title="Experiencia">Experiencia</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Educacion</h3>
+      <table border="1" id="tabla1" cellpadding="5" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Año</th>
+            <th>Institucion</th>
+            <th>Lugar</th>
+            <th>Culmino</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2021</td>
+            <td>Universidad Central</td>
+            <td>Bogota</td>
+            <td>En curso</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td>Next_u - Certificacion full Stack</td>
+            <td>Bogota</td>
+            <td>Si</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <hr/>
+    <section>
+      <h3>Agregar Educacion</h3>
+      <form name="formContacto" autocomplete="on" action novalidate>
+        <p>
+          <label for="ano">Año:</label><br/>
+          <input type="number" min="1990" max="2016" id="ano" placeholder="Ej:2005" required >
+        </p>
+        <p>
+          <label for="institucion">Institucion:</label><br/>
+          <input type="text" name="institucion" placeholder="Ej: Universidad Nacional" id="institucion" required>
+        </p>
+        <p>
+            <label for="lugar">Lugar:</label><br/>
+            <textarea name="Lugar" rows="1" cols="30" required></textarea>
+        </p>
+        <p>
+          <label for="culmino">Culmino:</label>
+          <input type="radio" name="culmino" id="culmino">Si
+          <input type="radio" name="culmino" id="culmino">No
+
+        </p>
+        <p>
+          <label for="subir" id="Subir"></label>
+          <input type="submit" name="subir" value="Submit" required>
+        </p>
+      </form>
+    </section>
+    <footer>
+      <p><em>Otros datos </em></p>
+      <ul>
+        <li><strong>Email: </strong><a href="mailto:iori_yagamy67@hotmail.com?subject=feedback" >iori_yagamy67@hotmail.com</a></li>
+        <li><strong>Telefono: </strong>304 660 4044</li>
+        <li><strong>Direccion: </strong>Av. Calle Falsa 123</li>
+      </ul>
+    </footer>
+  </body>
+</html>
